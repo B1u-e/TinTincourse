@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getArr",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "insertSort",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TinTinCourse/InsertionSort.sol": "InsertSort"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TinTinCourse/InsertionSort.sol": {
+			"keccak256": "0xb2ca6fc6137c6e51ee340f23446911838e56c902c3fbcf3de152461875eee612",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bee234db20f4e269b8dc93932d11b66977a96af272d5e3b5f6f5750d743d760a",
+				"dweb:/ipfs/QmXD3xC4S2CJ5sU3bmwSskvgbvn3BUBSWrnuVNRAsNubPG"
+			]
+		}
+	},
+	"version": 1
+}

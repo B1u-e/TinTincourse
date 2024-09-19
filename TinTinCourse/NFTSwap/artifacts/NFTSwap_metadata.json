@@ -1,0 +1,369 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "nftAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "List",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "nftAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "Purchase",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "nftAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Revoke",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "nftAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "Update",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "list",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "nftList",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "onERC721Received",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "purchase",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "revoke",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TinTinCourse/NFTSwap/NFTSwap.sol": "NFTSwap"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TinTinCourse/NFTSwap/ERC721.sol": {
+			"keccak256": "0x193bc469a941dd8eab1476bf4901a618c21a66599ce03ca37e5c792b014ddce5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8eed149ab31a8a5b4edc28306b4136dee7ff8106c583428aaf81e13130deb5cd",
+				"dweb:/ipfs/QmcMRKtVKvjmrtvLGZLkezzKAVF4zWgsnPNMxn5LmHKv1u"
+			]
+		},
+		"TinTinCourse/NFTSwap/IERC165.sol": {
+			"keccak256": "0x9a8f9c7be8955609b5252161f118bc8a4640bb8ee82e287e6486e5ca21bf1ab5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2587358108ce107c79ad10f7b3f6172713087a5656197a4390dc1a594cb337de",
+				"dweb:/ipfs/QmRDAFxyyFVXnCMmL7Dx31fEYtrJvuhdZuSytPSTMofrAm"
+			]
+		},
+		"TinTinCourse/NFTSwap/IERC721.sol": {
+			"keccak256": "0x527118e4caab49b1fb83be7494f9db012e8233b3673938a3aadc8eefdc133e9b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ed996288dfeb028ea9c68a3ac518f6757ed1b019f7e4ae8f592112bd0d3a08a",
+				"dweb:/ipfs/QmTT6xBg2uY3rtLcPhoszrJ4Nx9qAwvomQ92qYVjwis8nE"
+			]
+		},
+		"TinTinCourse/NFTSwap/IERC721Metadata.sol": {
+			"keccak256": "0x098c0358661d09857ba84b64b96dad61565c225a66279ab562f4e02f6cae9594",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ffc289433c97eff7f28cc2f6e4efd5968a45310655da9228876562425cca7603",
+				"dweb:/ipfs/QmRLsCHbr2Teyu8uoVo2uvEU8SucYv5saNbYeMTFvbrpn4"
+			]
+		},
+		"TinTinCourse/NFTSwap/IERC721Receiver.sol": {
+			"keccak256": "0x00c9b4ed4bffa5c5b88f1d4c89f2bec0d3032c85018c4a76184f50983f60d58e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4a6160635d5c7fbe3e69d748bf91e5243ebc9772be37e4bf828dd4ca18b2cc7",
+				"dweb:/ipfs/QmfMhjmHsAznHnCVULKmEFv6wgw5dEdXUDz5j6nxz4nYhY"
+			]
+		},
+		"TinTinCourse/NFTSwap/NFTSwap.sol": {
+			"keccak256": "0xac47d004b02d8464c2ecf88b140822f9d83ea9b5935aaf707b1b3acc2b1bf8ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5afeceb957c1a6d35183d6cecaf1cb9b82df32fb268022a7dae09a8d1a7e915e",
+				"dweb:/ipfs/QmRcbxRKzCU4em728SAs1fmxD17vWeNMN1fYgTAMYv5XsT"
+			]
+		},
+		"TinTinCourse/NFTSwap/String.sol": {
+			"keccak256": "0x35879cd15c16fb1e05bdf649d3768db9b2a32aa99aa9d22172a9550a63946f64",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a239a5a36d6a5beb4c049f16061c3577b02cca9b90893c863629315f731fd61c",
+				"dweb:/ipfs/QmWi1okMLtNhrCC798UGdehZFrekr16iYu4gWPfL8iDCAJ"
+			]
+		},
+		"TinTinCourse/NFTSwap/WTFApe.sol": {
+			"keccak256": "0x13a2a2fd47347e696b5c7309ed32a5a0fec1cf4351ee0036811a4e0715994408",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1236a6d0fff93827e61a92d947e08d0ec14ef8a57313cac8c6c8cee887a256db",
+				"dweb:/ipfs/QmenYcrggtWRQuzTnvjTy3FfcZjyRi2fWkr7yMLNjcgywx"
+			]
+		}
+	},
+	"version": 1
+}
